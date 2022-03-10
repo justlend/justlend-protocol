@@ -1,3 +1,20 @@
+JustLend Protocol
+=================
+
+JustLend Protocol is an TRON smart contract protocol for supplying or borrowing assets. Through the jToken contracts, accounts on the TRON blockchain *supply* capital (TRX or TRC-20 tokens) to receive jTokens or *borrow* assets from the protocol (holding other assets as collateral). The JustLend jToken contracts track these balances and algorithmically set interest rates for borrowers.
+
+Before getting started with this repo, please read:
+
+* The [Justlend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf), describing how Compound works
+* The [Justlend Terms Of Use](https://www.justlend.link/docs/JustLend_Terms_of_Use_en.pdf)
+
+For questions about interacting with JustLend, please visit [our Telegram Group](https://t.me/officialjustlend).
+
+
+
+Contracts
+=========
+
 
 We detail a few of the core contracts in the Justlend protocol.
 
@@ -38,8 +55,10 @@ We detail a few of the core contracts in the Justlend protocol.
   <dd>Initial interest rate model, as defined in the Whitepaper. This contract accepts a base rate and slope parameter in its constructor.</dd>
 </dl>
 
+Deployed Contract Address
+=========
+
 ```
-Contract address
 
 Unitroller TGjYzgCyPobsNS9n6WcbdLVR9dH7mWqFx7
 Comptroller TB23wYojvAsSx6gR8ebHiBqwSeABiBMPAr
