@@ -5,7 +5,7 @@ JustLend Protocol is an TRON smart contract protocol for supplying or borrowing 
 
 Before getting started with this repo, please read:
 
-* The [Justlend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf), describing how Compound works
+* The [Justlend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf)
 * The [Justlend Terms Of Use](https://www.justlend.link/docs/JustLend_Terms_of_Use_en.pdf)
 
 For questions about interacting with JustLend, please visit [our Telegram Group](https://t.me/officialjustlend).
@@ -20,7 +20,7 @@ We detail a few of the core contracts in the Justlend protocol.
 
 <dl>
   <dt>CToken, CErc20 and CEther</dt>
-  <dd>The Justlend jTokens, which are self-contained borrowing and lending contracts. CToken contains the core logic and CTrc20 and CEther add public interfaces for Trc20 tokens and ether, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller sections), and allows accounts to *mint* (supply capital), *redeem* (withdraw capital), *borrow* and *repay a borrow*. Each jToken is an TRC-20 compliant token where balances represent ownership of the market.</dd>
+  <dd>The Justlend jTokens, which are self-contained borrowing and lending contracts. CToken contains the core logic and CTrc20 and CEther add public interfaces for Trc20 tokens and TRX, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller sections), and allows accounts to *mint* (supply capital), *redeem* (withdraw capital), *borrow* and *repay a borrow*. Each jToken is an TRC-20 compliant token where balances represent ownership of the market.</dd>
 </dl>
 
 <dl>
