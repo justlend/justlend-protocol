@@ -55,6 +55,44 @@ We detail a few of the core contracts in the Justlend protocol.
   <dd>Initial interest rate model, as defined in the Whitepaper. This contract accepts a base rate and slope parameter in its constructor.</dd>
 </dl>
 
+
+<dl>
+  <dt>Careful Math</dt>
+  <dd>Library for safe math operations.</dd>
+</dl>
+
+<dl>
+  <dt>SafeToken</dt>
+  <dd>Library for safely handling Trc20 interaction.</dd>
+</dl>
+
+
+Compile The Contract
+=========
+
+You can get the compiler from [here](https://github.com/tronprotocol/solidity/releases/tag/tv_0.5.12)
+
+And rename the compiler executable file to `solc512`
+
+```shell
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Unitroller.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Comptroller.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Governance/WJST.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Governance/GovernorAlpha.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Timelock.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/JumpRateModelV2.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/WhitePaperInterestRateModel.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/CEther.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/CErc20Delegate.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/CErc20Delegator.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/PriceOracle/PriceOracle.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/PriceOracleProxy.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/PriceOracle/PriceOracle.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/PriceOracleProxy.sol
+./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Lens/CompoundLens.sol
+```
+
+
 Deployed Contract Address
 =========
 
@@ -104,3 +142,13 @@ eth CErc20Delegate TQBvTVisiceDvsQVbLbcYyWQGWP7wtaQnc
 oracle PriceOracle TD8bq1aFY8yc9nsD2rfqqJGDtkh7aPpEpr
 oracle proxy PriceOracleProxy TCKp2AzuhzV4B4Ahx1ej4mvQgHZ1kH7F7k
 ```
+
+
+Discussion
+----------
+
+For any concerns with the protocol, open an issue or visit us on [Telegram](https://t.me/officialjustlend) to discuss.
+
+For security concerns, please email [service@justlend.org](mailto:service@justlend.org).
+
+_© Copyright 2021 JustLend DAO
