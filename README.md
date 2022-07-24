@@ -149,6 +149,6 @@ Discussion
 
 For any concerns with the protocol, open an issue or visit us on [Telegram](https://t.me/officialjustlend) to discuss.
 
-For security concerns, please email [service@justlend.org](mailto:service@justlend.org).
+For security concerns, please email [services@justlend.org](mailto:service@justlend.org).
 
 _© Copyright 2021 JustLend DAO
