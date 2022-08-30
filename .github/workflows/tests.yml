@@ -27,7 +27,7 @@ jobs:
           restore-keys: |
             yarn-
       - name: Install dependencies
-        run: npm ci 
+        run: npm i 
 
       # This is required separately from yarn test because it generates the typechain definitions
       - name: Compile
