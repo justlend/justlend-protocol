@@ -1,0 +1,20 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "1. deploy Comptroller.sol ComptrollerAddress 2. deploy Unitroller.sol  UnitrollerAddress 3. UnitrollerAddress _setPendingImplementation(address newPendingImplementation)  ComptrollerAddress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loorola/justlend-protocol.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "ethers": "^5.7.0",
+    "tronweb": "^4.3.0"
+  }
+}
