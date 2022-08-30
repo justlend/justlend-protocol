@@ -29,9 +29,6 @@ jobs:
       - name: Install dependencies
         run: npm i 
 
-      # This is required separately from yarn test because it generates the typechain definitions
-      - name: Compile
-        run: npm run compile
 
       #- name: Run unit tests
       #  run: yarn test
