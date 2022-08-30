@@ -18,7 +18,7 @@ We detail a few of the core contracts in the Justlend protocol.
 
 <dl>
   <dt>CToken, CErc20 and CEther</dt>
-  <dd>The Justlend jTokens which are self-contained borrowing and lending contracts, are deployed from the code of CToken and CEther contracts. CToken contains the core logic and CTrc20 and CEther add public interfaces for TRC20 tokens and TRX, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller parts), and allows accounts to <b>mint</b> (supply capital), <b>redeem</b> (withdraw capital), <b>borrow</b> and <b>repay a borrow</b>. Each jToken is an TRC20 compliant token where balances represent ownership of the market.</dd>
+  <dd>The Justlend jTokens which are self-contained borrowing and lending contracts, are deployed from the code of CToken and CEther contracts. CToken contains the core logic and CErc20 and CEther add public interfaces for TRC20 tokens and TRX, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller parts), and allows accounts to <b>mint</b> (supply capital), <b>redeem</b> (withdraw capital), <b>borrow</b> and <b>repay a borrow</b>. Each jToken is an TRC20 compliant token where balances represent ownership of the market.</dd>
 </dl>
 
 <dl>
@@ -63,11 +63,34 @@ We detail a few of the core contracts in the Justlend protocol.
   <dd>Library for safely handling Trc20 interaction.</dd>
 </dl>
 
+Deployment
+----------
+TronBox is being used in this project. Before getting started with the deployment script, please read:
 
-Compile The Contract
-=========
+* [Tronbox Tutorial](https://developers.tron.network/v3.7/docs/tron-box-user-guide)
 
-You can get the compiler from [here](https://github.com/tronprotocol/solidity/releases/tag/tv_0.5.12)
+
+## Compile and Deployment
+
+To get started, first create and initialize a [NodeJS 8.0+ environment](https://github.com/nodejs/node). Next, clone the repo and install the developer dependencies:
+
+### Setup
+```
+npm i
+```
+
+### OS requirement
+ * Linux
+ * Mac OS X
+
+### Compile The Contract
+
+Run this by using tronbox embedded solc:
+ ```shell
+ tronbox compile
+```
+
+Or you may want to use external compilers. You can get the compiler from [here](https://github.com/tronprotocol/solidity/releases/tag/tv_0.5.12)
 
 And rename the compiler executable file to `solc512`, then compile the contracts with these commands.
 
@@ -89,59 +112,27 @@ And rename the compiler executable file to `solc512`, then compile the contracts
 ./solc512   --allow-paths $YOUR_PATH/justlend-protocol/, --bin --abi --optimize $YOUR_PATH/justlend-protocol/Lens/CompoundLens.sol
 ```
 
-
-Deployed Contract Address
-=========
-
+### Deploy on Nile TestNet
+Before use, `sample-env` should be renamed to `.env` with the added network config:
+```
+PRIVATE_KEY_NILE=YOUR_PRIVATE_KEY
+RESERVER_ADMIN=YOUR_RESERVE_ADMIN_ADMIN_ADDRESS
+ADMIN=YOUR_ADMIN_ADDRESS
 ```
 
-Unitroller TGjYzgCyPobsNS9n6WcbdLVR9dH7mWqFx7
-Comptroller TB23wYojvAsSx6gR8ebHiBqwSeABiBMPAr
-WJST TCczUFrX1u4v1mzjBVXsiVyehj1vCaNxDt
-GovernorAlpha TH1SVVVU9NF1ans3CRBCJ5kW2yvn4sHP9b
-Timelock TRWNvb15NmfNKNLhQpxefFz7cNjrYjEw7x
-jumpRateUSDT JumpRateModelV2 TTetZxp98wcPaciyBMHYvQkS735RZ3tyXY
-jumpRateUSDJ JumpRateModelV2 TLScd7kpWnKADtH7ZXKzrJHAxJUnjiiExq
-jumpRateSUN JumpRateModelV2 TK7WVRz34wUVRCpsgbW1wUCPmh5bSnCqg1
-jumpRateWIN JumpRateModelV2 TBtChPo34CGJkb1QVEwPhxS8HQE2Xp7ir2
-jumpRateJST JumpRateModelV2 TMNXjQTa8x4wNHBa3X647KRnkRQpSuXBRT
-jumpRateWBTT JumpRateModelV2 TJAfCJdJZa44pG5adQGLMLh27hJqPeLxod
-jumpRateNFT JumpRateModelV2 TBE9tkWYdZPEHLNeKC6Xn44YFLpieiM3xq.
+Assuming all contracts haven't been deployed, the user must deploy the script one by one individually by replacing `xx` with the correct number of the file and then record the contract addresses and data to `../data/test-xxx.json`. Please feel free to modify the `migrations` and contract data.
 
-WhitePaperModelTRX WhitePaperInterestRateModel TF8B4iysAGfrssdQhMJGYsdd9SZoxGsH7M
-WhitePaperModelBTC WhitePaperInterestRateModel TYJi9q4qLQWoBiKmMQY3Mn81tmhw7SeCmh
-
-TRX  CEther TE2RzoSV3wFK99w6J9UnnZ4vLfXYoxvRwP
-USDT CErc20Delegate TLjn59xNM7VEK6VZ3VQ8Y1ipxsdsFka5wZ
-USDT CErc20Delegator TXJgMdjVX5dKiQaUi9QobwNxtSQaFqccvd
-USDJ CErc20Delegate TYSHTEq9NFSgst94saeRvt6rAYgWkqMFbj
-USDJ CErc20Delegator TL5x9MtSnDy537FXKx53yAaHRRNdg9TkkA
-SUNOLD CErc20Delegate TSCpzKvJfXHj1HW5jKg9dZA8z9aMxxGLd8
-SUNOLD CErc20Delegator TGBr8uh9jBVHJhhkwSJvQN2ZAKzVkxDmno
-WIN CErc20Delegate TW3GyD3hYkKwzSGytWwWGXpe2a93zCpRzJ
-WIN CErc20Delegator TRg6MnpsFXc82ymUPgf5qbj59ibxiEDWvv
-BTC CErc20Delegate TVsKSRgRoMcCp798qqRGesXRfzy2MzRjkR
-BTC CErc20Delegator TLeEu311Cbw63BcmMHDgDLu7fnk9fqGcqT
-JST CErc20Delegate TQ2sbnmxtR7jrNk4nxz2A8f9sneCqmk6SB
-JST CErc20Delegator TWQhCXaWz4eHK4Kd1ErSDHjMFPoPc9czts
-WBTT CErc20Delegate TV4WWBqBfn1kd4KmpYeSJpVAfybfrxEN9L
-WBTT CErc20Delegator TUY54PVeH6WCcYCd6ZXXoBDsHytN9V5PXt
-NFT CErc20Delegate TLkUdtDBLMfJdXni2iTa4u2DKM53XmDJHi.
-NFT CErc20Delegator TFpPyDCKvNFgos3g3WVsAqMrdqhB81JXHE.
-SUN CErc20Delegator TPXDpkg9e3eZzxqxAUyke9S4z4pGJBJw9e
-SUN CErc20Delegate  TM82erAZJSP7NKc17JdTnzVC8WKJHismWB
-TUSD  CErc20Delegator  TSXv71Fy5XdL3Rh2QfBoUu3NAaM4sMif8R
-TUSD CErc20Delegate    THbrSjDsDA2KJRxx8K73tN7vLgaXSUNQFk
-USDC CErc20Delegator TNSBA6KvSvMoTqQcEgpVK7VhHT3z7wifxy
-USDC CErc20Delegate THQY8YX19jLFSFg1xhthM5wb7xZvKLCzgq
-ETH CErc20Delegator TR7BUFRQeq1w5jAZf1FKx85SHuX6PfMqsV
-ETH CErc20Delegate TQBvTVisiceDvsQVbLbcYyWQGWP7wtaQnc
-USDD CErc20Delegator TX7kybeP6UwTBRHLNPYmswFESHfyjm9bAS
-USDD CErc20Delegate TFdTqrMyb6PMMqTa9vnhmQHDFDU2oUhw9W
-Oracle PriceOracle TD8bq1aFY8yc9nsD2rfqqJGDtkh7aPpEpr
-Oracle proxy PriceOracleProxy TCKp2AzuhzV4B4Ahx1ej4mvQgHZ1kH7F7k
+```
+tronbox migrate --network nile -f xx --to xx
 ```
 
+For example, if you want to run `3_deploy_comptroller.js`, the command will be `tronbox migrate --network nile -f 3 --to 3`. 
+
+Due to the limitation of Tronbox, `Governor.setTimelock()` is unable to be invoked among the migration script. Therefore, the related script is inside `script/2_setTimelock.js`. Please run it for setting up the timelock address from Governor.
+
+## Contract Callers
+
+The sample of contract invokers is inside the `script` folder.
 
 Discussion
 ----------
