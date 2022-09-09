@@ -7,6 +7,7 @@ Before getting started with this repo, please read:
 
 * The [Justlend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf)
 * The [Justlend Terms Of Use](https://www.justlend.link/docs/JustLend_Terms_of_Use_en.pdf)
+* The [Justlend Security Assessment](https://www.justlend.link/docs/justlend_audit_en.pdf)
 
 For questions about interacting with JustLend, please visit [our Telegram Group](https://t.me/officialjustlend).
 
