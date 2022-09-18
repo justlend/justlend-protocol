@@ -1,0 +1,83 @@
+{
+    "tokens": [
+        "TMu1oMXC6W5kaLofKAi31JVgPvipNV1yrc",
+        "TEreCfQFddfyQxh5nFM3u7TwB9kVwWRRcf",
+        "TVzxtqQGNcLde3f9j1diUAFBsLc1RRsjbq",
+        "TB2Cw9ye5sRNw8fjB3C1TnRNiF25BEpBYv",
+        "TYgf92y49p3uRLzqGjSvs66BcDexSLRk72"
+    ],
+    "cErc20Delegate": [
+        "TC5i6YWS2K2KrjRJX4ff2vyF5rKgnphyRt",
+        "TUQZrvvg6uDCrq31ncNKNUgwt6zaaw81fB",
+        "TQRfdUcAoEve9AwuwskqxtrUumNPX9ah9T",
+        "TJv4R4baKPocSrJBKTRupeEnAZUbeRZVtj",
+        "TTPEMvDpSQ9DdnoSvMzK4rQvjDCyLuhbF3"
+    ],
+    "CEther": {
+        "address": "TMdJKNTB9jpQdBEA7iGsZmngtNSjQPE5Zv",
+        "exchangeRate": "200000000000000000000000000",
+        "reserveFactor": "200000000000000000",
+        "name": "CEther",
+        "symbol": "CEther",
+        "decimals": 18,
+        "interestRateModel": "TGuD4cTsLwJExSdGdrT1wwJ5xiMnAPw25s",
+        "collateralFactor": "80000000000000000"
+    },
+    "tokenConfig": [
+        {
+            "name": "T1",
+            "symbol": "T1",
+            "interestRateModel": "TM1q3DUrmnNTS45xdZ9EE7WAbAbyRyQtsG",
+            "exchangeRate": "200000000000000000000000000",
+            "decimals": "18",
+            "reserveFactor": "150000000000000000",
+            "priceOracleV1Key": "0x1",
+            "collateralFactor": "70000000000000000"
+        },
+        {
+            "name": "T2",
+            "symbol": "T2",
+            "interestRateModel": "TM1q3DUrmnNTS45xdZ9EE7WAbAbyRyQtsG",
+            "exchangeRate": "300000000000000000000000000",
+            "decimals": "18",
+            "reserveFactor": "100000000000000000",
+            "priceOracleV1Key": "0x2",
+            "collateralFactor": "60000000000000000"
+        },
+        {
+            "name": "T3",
+            "symbol": "T3",
+            "interestRateModel": "TM1q3DUrmnNTS45xdZ9EE7WAbAbyRyQtsG",
+            "exchangeRate": "400000000000000000000000000",
+            "decimals": "18",
+            "reserveFactor": "300000000000000000",
+            "priceOracleV1Key": "0x3",
+            "collateralFactor": "50000000000000000"
+        },
+        {
+            "name": "T4",
+            "symbol": "T4",
+            "interestRateModel": "TM1q3DUrmnNTS45xdZ9EE7WAbAbyRyQtsG",
+            "exchangeRate": "250000000000000000000000000",
+            "decimals": "18",
+            "reserveFactor": "250000000000000000",
+            "collateralFactor": "40000000000000000"
+        },
+        {
+            "name": "T5",
+            "symbol": "T5",
+            "interestRateModel": "TM1q3DUrmnNTS45xdZ9EE7WAbAbyRyQtsG",
+            "exchangeRate": "100000000000000000000000000",
+            "decimals": "18",
+            "reserveFactor": "200000000000000000",
+            "collateralFactor": "30000000000000000"
+        }
+    ],
+    "CErc20Delegator": [
+        "TPrPjDEV3Ju78zUAYWgTomRkCznzrp52CN",
+        "TMqCBDwukC8VTEQRTgC6QFZUuw6aeUE8cL",
+        "TXdBDgBTMk3JCra8G2cRWygeRvQBz9c9aP",
+        "TY1bbjKMq1YXYE64FVMX8Gmpbra9XDtwZj",
+        "TJfxDMh1fr9HwTbXJJaesw6JDqMVUSvACA"
+    ]
+}
