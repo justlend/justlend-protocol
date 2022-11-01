@@ -27,8 +27,13 @@ We detail a few of the core contracts in the Justlend protocol.
 </dl>
 
 <dl>
-  <dt>GovernorAlpha</dt>
-  <dd>The administrator of the Justlend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the Justlend timelock and then have effects on Justlend jToken and Comptroller contracts. This contract may be replaced in the future with a beta version.</dd>
+  <dt>GovernorAlpha (Deprecated)</dt>
+  <dd>Old governance contract. The administrator of the Justlend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the Justlend timelock and then have effects on Justlend jToken and Comptroller contracts. </dd>
+</dl>
+
+<dl>
+  <dt>GovernorBravo </dt>
+  <dd>The current used governance contract. The administrator of the Justlend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the Justlend timelock and then have effects on Justlend jToken and Comptroller contracts. </dd>
 </dl>
 
 <dl>

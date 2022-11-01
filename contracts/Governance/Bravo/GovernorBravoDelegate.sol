@@ -262,8 +262,9 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV2, GovernorBravoE
       * @notice Internal function that caries out voting logic
       * @param voter The voter that is casting their vote
       * @param proposalId The id of the proposal to vote on
+      * @param votes  The number of Voter's total votes to proposalId, should gt has voted
       * @param support The support value for the vote. 0=against, 1=for, 2=abstain
-      * @return The number of votes cast
+      * @return The number of total votes cast.
       */
     function castVoteInternal(address voter, uint proposalId, uint votes, uint8 support) internal returns (uint96) {
         require(state(proposalId) == ProposalState.Active, "GovernorBravo::castVoteInternal: voting is closed");
@@ -272,26 +273,27 @@ contract GovernorBravoDelegate is GovernorBravoDelegateStorageV2, GovernorBravoE
         Receipt storage receipt = proposal.receipts[voter];
         require(receipt.hasVoted == false || receipt.support == support, "GovernorBravo::castVoteInternal: wrong voter status");
         //        uint96 votes = wjst.getPriorVotes(voter, proposal.startBlock);
-        require(votes <= wjst.getPriorVotes(voter, proposal.startBlock), "GovernorBravo::castVoteInternal: short of vote power");
+        require(votes >= receipt.votes, "GovernorBravo::castVoteInternal: votes should greater than or equal to the number has voted");
+        uint256 votesAdded = votes - receipt.votes;
+        require(votesAdded <= wjst.getPriorVotes(voter, proposal.startBlock), "GovernorBravo::castVoteInternal: short of vote power");
 
         if (support == 0) {
-            proposal.againstVotes = add256(proposal.againstVotes, votes);
+            proposal.againstVotes = add256(proposal.againstVotes, votesAdded);
         } else if (support == 1) {
-            proposal.forVotes = add256(proposal.forVotes, votes);
+            proposal.forVotes = add256(proposal.forVotes, votesAdded);
         } else if (support == 2) {
-            proposal.abstainVotes = add256(proposal.abstainVotes, votes);
+            proposal.abstainVotes = add256(proposal.abstainVotes, votesAdded);
         }
         
-        require(wjst.voteFresh(voter, proposalId, support, votes), "wjst vote exception");
+        require(wjst.voteFresh(voter, proposalId, support, votesAdded), "wjst vote exception");
         receipt.hasVoted = true;
         receipt.support = support;
-        uint _votes = add256(receipt.votes, votes);
-        receipt.votes = uint96(_votes);
+        receipt.votes = uint96(votes);
 
         //TODO ProposalSnapshot abstainVotes
         //        emit ProposalSnapshot(proposalId, proposal.forVotes, proposal.againstVotes);
         emit ProposalSnapshotBravo(proposalId, proposal.forVotes, proposal.againstVotes, proposal.abstainVotes);
-        return uint96(_votes);
+        return uint96(votes);
     }
 
     /**

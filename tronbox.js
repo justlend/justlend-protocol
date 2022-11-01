@@ -46,7 +46,7 @@ Then, run the migration with:
     },
     compilers: {
       solc: {
-        version: '0.5.12',
+        version: '0.5.16',
       }
     }
   },
@@ -55,6 +55,7 @@ Then, run the migration with:
     optimizer: {
       enabled: true,
       runs: 10000
-    }
+    },
+    evmVersion: "istanbul"
   },
 }
