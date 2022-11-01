@@ -17,6 +17,8 @@ Comptroller [TB23wYojvAsSx6gR8ebHiBqwSeABiBMPAr](https://tronscan.org/#/contract
 
 GovernorBravoDelegator [TEqiF5JbhDPD77yjEfnEMncGRZNDt2uogD](https://tronscan.org/#/contract/TEqiF5JbhDPD77yjEfnEMncGRZNDt2uogD)
 
+GovernorBravoDelegate [TCiQTkxhzwSeXhRsNdHCvrxHRAvpjQn5Dt](https://tronscan.io/#/contract/TCiQTkxhzwSeXhRsNdHCvrxHRAvpjQn5Dt/code)
+
 WJST [TXk9LnTnLN7oH96H3sKxJayMxLxR9M4ZD6](https://tronscan.org/#/contract/TXk9LnTnLN7oH96H3sKxJayMxLxR9M4ZD6)
 
 Timelock [TRWNvb15NmfNKNLhQpxefFz7cNjrYjEw7x](https://tronscan.org/#/contract/TRWNvb15NmfNKNLhQpxefFz7cNjrYjEw7x)
