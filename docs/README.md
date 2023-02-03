@@ -17,7 +17,7 @@ Comptroller [TB23wYojvAsSx6gR8ebHiBqwSeABiBMPAr](https://tronscan.org/#/contract
 
 GovernorBravoDelegator [TEqiF5JbhDPD77yjEfnEMncGRZNDt2uogD](https://tronscan.org/#/contract/TEqiF5JbhDPD77yjEfnEMncGRZNDt2uogD)
 
-GovernorBravoDelegate [TCiQTkxhzwSeXhRsNdHCvrxHRAvpjQn5Dt](https://tronscan.io/#/contract/TCiQTkxhzwSeXhRsNdHCvrxHRAvpjQn5Dt/code)
+GovernorBravoDelegate [TCiQTkxhzwSeXhRsNdHCvrxHRAvpjQn5Dt](https://tronscan.io/#/contract/TUeNh9BsYK44XePmFAuKZWg2rJuU7bSt5u)
 
 WJST [TXk9LnTnLN7oH96H3sKxJayMxLxR9M4ZD6](https://tronscan.org/#/contract/TXk9LnTnLN7oH96H3sKxJayMxLxR9M4ZD6)
 
@@ -95,6 +95,10 @@ ETH CErc20Delegate [TQBvTVisiceDvsQVbLbcYyWQGWP7wtaQnc](https://tronscan.org/#/c
 USDD CErc20Delegator [TX7kybeP6UwTBRHLNPYmswFESHfyjm9bAS](https://tronscan.org/#/contract/TX7kybeP6UwTBRHLNPYmswFESHfyjm9bAS)
 
 USDD CErc20Delegate [TFdTqrMyb6PMMqTa9vnhmQHDFDU2oUhw9W](https://tronscan.org/#/contract/TFdTqrMyb6PMMqTa9vnhmQHDFDU2oUhw9W)
+
+BUSD CErc20Delegator [TLHASseQymmpGQdfAyNjkMXFTJh8nzR2x2/code](https://tronscan.org/#/contract/TLHASseQymmpGQdfAyNjkMXFTJh8nzR2x2)
+
+BUSD CErc20Delegate [TNRUqbYfYv4iizWa1b2kd6ZBaoh5zrg3yk](https://tronscan.org/#/contract/TNRUqbYfYv4iizWa1b2kd6ZBaoh5zrg3yk)
 
 Oracle PriceOracle [TD8bq1aFY8yc9nsD2rfqqJGDtkh7aPpEpr](https://tronscan.org/#/contract/TD8bq1aFY8yc9nsD2rfqqJGDtkh7aPpEpr)
 
