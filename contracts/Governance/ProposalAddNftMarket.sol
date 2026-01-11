@@ -50,7 +50,7 @@ contract ProposalAddNftMarket {
     }
 
     event OwnershipTransferred(address  indexed  previousOwner,  address  indexed  newOwner);
-    event Withdraw_token(address _caller, address _recievor, uint256 _amount);
+    event Withdraw_token(address _caller, address _receiver, uint256 _amount);
 
     function() external payable {
     }
