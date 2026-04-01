@@ -1,12 +1,12 @@
 JustLend Protocol
 =================
 
-JustLend Protocol is an TRON smart contract protocol for supplying or borrowing assets. Through the jToken contracts, accounts on the TRON blockchain <b>supply</b> capital (TRX or TRC20 tokens) to receive jTokens or <b>borrow</b> assets from the protocol (holding other assets as collateral). The JustLend jToken contracts track these balances and algorithmically set interest rates for borrowers.
+JustLend Protocol is a TRON smart contract protocol for supplying or borrowing assets. Through the jToken contracts, accounts on the TRON blockchain <b>supply</b> capital (TRX or TRC20 tokens) to receive jTokens or <b>borrow</b> assets from the protocol (holding other assets as collateral). The JustLend jToken contracts track these balances and algorithmically set interest rates for borrowers.
 
 Before getting started with this repo, please read:
 
-* The [Justlend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf)
-* The [Justlend Terms Of Use](https://www.justlend.link/docs/JustLend_Terms_of_Use_en.pdf)
+* The [JustLend Whitepaper](https://www.justlend.link/docs/justlend_whitepaper_en.pdf)
+* The [JustLend Terms of Use](https://www.justlend.link/docs/JustLend_Terms_of_Use_en.pdf)
 
 For questions about interacting with JustLend, please visit [our Telegram Group](https://t.me/officialjustlend).
 
@@ -14,11 +14,11 @@ For questions about interacting with JustLend, please visit [our Telegram Group]
 Contracts
 =========
 
-We detail a few of the core contracts in the Justlend protocol.
+We detail a few of the core contracts in the JustLend protocol.
 
 <dl>
   <dt>CToken, CErc20 and CEther</dt>
-  <dd>The Justlend jTokens which are self-contained borrowing and lending contracts, are deployed from the code of CToken and CEther contracts. CToken contains the core logic and CErc20 and CEther add public interfaces for TRC20 tokens and TRX, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller parts), and allows accounts to <b>mint</b> (supply capital), <b>redeem</b> (withdraw capital), <b>borrow</b> and <b>repay a borrow</b>. Each jToken is an TRC20 compliant token where balances represent ownership of the market.</dd>
+  <dd>The JustLend jTokens which are self-contained borrowing and lending contracts, are deployed from the code of CToken and CEther contracts. CToken contains the core logic and CErc20 and CEther add public interfaces for TRC20 tokens and TRX, respectively. Each jToken is assigned an interest rate and risk model (see InterestRateModel and Comptroller parts), and allows accounts to <b>mint</b> (supply capital), <b>redeem</b> (withdraw capital), <b>borrow</b> and <b>repay a borrow</b>. Each jToken is a TRC20-compliant token where balances represent ownership of the market.</dd>
 </dl>
 
 <dl>
@@ -28,12 +28,12 @@ We detail a few of the core contracts in the Justlend protocol.
 
 <dl>
   <dt>GovernorAlpha (Deprecated)</dt>
-  <dd>Old governance contract. The administrator of the Justlend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the Justlend timelock and then have effects on Justlend jToken and Comptroller contracts. </dd>
+  <dd>Old governance contract. The administrator of the JustLend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the JustLend timelock and then have effects on JustLend jToken and Comptroller contracts. </dd>
 </dl>
 
 <dl>
   <dt>GovernorBravo </dt>
-  <dd>The current used governance contract. The administrator of the Justlend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the Justlend timelock and then have effects on Justlend jToken and Comptroller contracts. </dd>
+  <dd>The currently used governance contract. The administrator of the JustLend timelock contract. Holders of JST token may create and vote on proposals which will be queued into the JustLend timelock and then have effects on JustLend jToken and Comptroller contracts. </dd>
 </dl>
 
 <dl>
@@ -65,7 +65,7 @@ We detail a few of the core contracts in the Justlend protocol.
 
 <dl>
   <dt>SafeToken</dt>
-  <dd>Library for safely handling Trc20 interaction.</dd>
+  <dd>Library for safely handling TRC20 interaction.</dd>
 </dl>
 
 Deployment
@@ -77,7 +77,7 @@ TronBox is being used in this project. Before getting started with the deploymen
 
 ## Compile and Deployment
 
-To get started, first create and initialize a [NodeJS 8.0+ environment](https://github.com/nodejs/node). Next, clone the repo and install the developer dependencies:
+To get started, first create and initialize a [Node.js 8.0+ environment](https://github.com/nodejs/node). Next, clone the repo and install the developer dependencies:
 
 ### Setup
 ```
@@ -86,7 +86,7 @@ npm i
 
 ### OS requirement
  * Linux
- * Mac OS X
+ * macOS
 
 ### Compile The Contract
 
