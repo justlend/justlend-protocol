@@ -71,14 +71,14 @@ contract PriceOracleProxy is PriceOracle {
     /**
      * @notice Get the underlying price of a listed cToken asset
      * @param cToken The cToken to get the underlying price of
-     * @return The underlying asset price mantissa (scaled by 1e18)
+     * @return The underlying asset price mantissa (scaled by 1e27)
      */
     function getUnderlyingPrice(CToken cToken) public view returns (uint) {
         address cTokenAddress = address(cToken);
 
         if (cTokenAddress == cEthAddress) {
             // ether always worth 1
-            return 1e18;
+            return 1e27; 
         }
 
         if (cTokenAddress == cUsdcAddress || cTokenAddress == cUsdtAddress) {

@@ -128,3 +128,20 @@ contract ComptrollerV3Storage is ComptrollerV2Storage {
     /// @notice The COMP accrued but not yet transferred to each user
     mapping(address => uint) public compAccrued;
 }
+
+contract ComptrollerV4Storage is ComptrollerV3Storage {
+    // @notice The borrowCapGuardian can set borrowCaps to any number for any market. Lowering the borrow cap could disable borrowing on the given market.
+    address public borrowCapGuardian;
+
+    // @notice Borrow caps enforced by borrowAllowed for each cToken address. Defaults to zero which corresponds to unlimited borrowing.
+    mapping(address => uint) public borrowCaps;
+}
+
+contract ComptrollerV5Storage is ComptrollerV4Storage {
+    // @notice The collateralFactorGuardian can set collateralFactor to any number for any market.
+    address public collateralFactorGuardian;
+
+    // @notice collateralFactorGuardian can set collateralFactor for each cToken address. Defaults to false that collateralFactorGuardian has no permission.
+    mapping(address => bool) public collateralFactorGuardianMarkets;
+
+}
