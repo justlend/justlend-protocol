@@ -8,5 +8,5 @@ module.exports = async function(deployer) {
     const comptroller = await Comptroller.deployed();
     const unitroller = await Unitroller.deployed();
     await unitroller._setPendingImplementation(Comptroller.address);
-    await comptroller._become(Unitroller.address, []);
+    await comptroller._become(Unitroller.address);
 }
